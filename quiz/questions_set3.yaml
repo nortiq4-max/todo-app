@@ -1,0 +1,273 @@
+# 理解度チェック 第3セット（仕上げの30問）
+# GH-900 の公式の出題範囲（7分野）に沿ったオリジナル問題です。実際の試験問題ではありません。
+# 答えは quiz/answers_set3.yaml に書き、python grader/quiz.py --set 3 で自己採点します。
+
+- id: u01
+  domain: GitとGitHubの基本
+  question: git add の役割として正しいものはどれ？
+  choices:
+    a: 変更をリモートに送る
+    b: 新しいリポジトリを作る
+    c: 変更をステージし、次のコミットに含める準備をする
+    d: 直前のコミットを取り消す
+
+- id: u02
+  domain: GitとGitHubの基本
+  question: 直前のコミットのメッセージに誤字があった（まだ push していない）。直すのに使うコマンドはどれ？
+  choices:
+    a: git commit --amend
+    b: git push --force
+    c: git clone
+    d: git init
+
+- id: u03
+  domain: GitとGitHubの基本
+  question: すでに push したコミットの変更を取り消したい。ただし、ほかの人も使っているので履歴は書き換えたくない。どうする？
+  choices:
+    a: git reset --hard で消してから force push する
+    b: リポジトリを削除して作り直す
+    c: 変更したファイルを .gitignore に書く
+    d: git revert で、その変更を打ち消す新しいコミットを作る
+
+- id: u04
+  domain: GitとGitHubの基本
+  question: Git の HEAD が指しているものはどれ？
+  choices:
+    a: リポジトリで最初のコミット
+    b: 今いるブランチの最新のコミット（今の作業の位置）
+    c: リモートの main ブランチ
+    d: 削除されたコミットの一覧
+
+- id: u05
+  domain: GitとGitHubの基本
+  question: git tag の使い方として正しいものはどれ？
+  choices:
+    a: 特定のコミットに v1.0.0 のような名前を付ける
+    b: Issueにラベルを付ける
+    c: ブランチを削除する
+    d: ファイルを暗号化する
+
+- id: u06
+  domain: GitとGitHubの基本
+  question: 作業の途中で、急いで別のブランチに切り替える必要が出た。いまの変更はまだコミットしたくない。使うとよいコマンドはどれ？
+  choices:
+    a: git push
+    b: git gc
+    c: git stash（変更を一時的に退避し、あとで戻せる）
+    d: git fetch
+
+- id: u07
+  domain: GitとGitHubの基本
+  question: 分散型のバージョン管理の利点として正しいものはどれ？
+  choices:
+    a: 必ず1台のサーバでしか作業できない
+    b: 履歴はサーバにしか残らない
+    c: インターネットにつながっていないとコミットできない
+    d: サーバが使えないときでも、手元で履歴の確認やコミットができる
+
+- id: u08
+  domain: リポジトリの扱い
+  question: GitHub Pages の説明として正しいものはどれ？
+  choices:
+    a: Issueをまとめて印刷する機能
+    b: リポジトリの中身から、静的なWebサイトを公開できる機能
+    c: データベースを提供する機能
+    d: 非公開のチャットの機能
+
+- id: u09
+  domain: リポジトリの扱い
+  question: GitHub の Releases（リリース）の説明として正しいものはどれ？
+  choices:
+    a: リポジトリの削除を予約する機能
+    b: Issueの一覧を書き出す機能
+    c: タグをもとに、変更点の説明や配布するファイルをまとめて公開する機能
+    d: ブランチを保護する機能
+
+- id: u10
+  domain: 共同作業の機能
+  question: Issue とプルリクエストの違いとして正しいものはどれ？
+  choices:
+    a: Issueは課題や提案を記録して話し合う場、プルリクエストはコードの変更を取り込む提案
+    b: どちらもまったく同じもの
+    c: Issueからは、コードを直接変更できる
+    d: プルリクエストは、管理者しか作れない
+
+- id: u11
+  domain: 共同作業の機能
+  question: レビューで「Approve」を選ぶと、どういう意味になる？
+  choices:
+    a: 修正を求めた
+    b: コメントだけで、判断はしていない
+    c: プルリクエストを閉じた
+    d: 変更を承認した
+
+- id: u12
+  domain: 共同作業の機能
+  question: プルリクエストの説明欄に「Closes #5」と書いてマージしたのに、Issue #5 が閉じなかった。考えられる理由はどれ？
+  choices:
+    a: 説明欄に書いたから
+    b: マージ先がデフォルトブランチではなかった
+    c: Issueの番号が1けただったから
+    d: レビューで承認されていたから
+
+- id: u13
+  domain: 共同作業の機能
+  question: Issueの本文に Markdown で「- [ ] 牛乳を買う」と書くと、どう表示される？
+  choices:
+    a: チェックボックスつきのタスクリスト
+    b: 大きな見出し
+    c: リンク
+    d: 表
+
+- id: u14
+  domain: 共同作業の機能
+  question: Gist の説明として正しいものはどれ？
+  choices:
+    a: 非公開のリポジトリと同じで、本人しか見られない
+    b: Issueの別名
+    c: コードの断片やメモを手軽に共有できる。シークレットのGistでも、URLを知っていれば誰でも見られる
+    d: 有料プランだけの機能
+
+- id: u15
+  domain: 共同作業の機能
+  question: リポジトリの Wiki の使い方として正しいものはどれ？
+  choices:
+    a: 依存関係の一覧を自動で作る
+    b: リポジトリに付いた、ドキュメント用のページを書く
+    c: コミットを取り消す
+    d: CIを設定する
+
+- id: u16
+  domain: 共同作業の機能
+  question: リポジトリの「Watch」を設定すると、どうなる？
+  choices:
+    a: リポジトリがお気に入りに入る
+    b: リポジトリが自分のアカウントにコピーされる
+    c: リポジトリが読み取り専用になる
+    d: リポジトリの活動の通知を受け取れる
+
+- id: u17
+  domain: 共同作業の機能
+  question: ドラフトのプルリクエストを「Ready for review」に切り替えたときに起きることはどれ？
+  choices:
+    a: CODEOWNERS の担当者に、自動でレビューが依頼される（設定がある場合）
+    b: 自動でマージされる
+    c: プルリクエストが閉じる
+    d: ブランチが削除される
+
+- id: u18
+  domain: 共同作業の機能
+  question: Issue フォーム（YAMLで書くIssueテンプレート）でできることはどれ？
+  choices:
+    a: Issueを自動で閉じる
+    b: Issueを別のリポジトリに移す
+    c: 入力欄を決めた、フォーム形式のIssueテンプレートを作る
+    d: Issueを非公開にする
+
+- id: u19
+  domain: モダンな開発
+  question: GitHub Actions のワークフロー、ジョブ、ステップの関係として正しいものはどれ？
+  choices:
+    a: ステップの中に、複数のワークフローがある
+    b: ワークフローは1つ以上のジョブからなり、ジョブは順に実行されるステップの集まり
+    c: ジョブとステップは同じもの
+    d: ワークフローは1つのステップしか持てない
+
+- id: u20
+  domain: モダンな開発
+  question: GitHub Actions の「ランナー」の説明として正しいものはどれ？
+  choices:
+    a: ワークフローを書く人
+    b: Issueの担当者
+    c: リポジトリの管理者
+    d: ジョブを実行するマシン。GitHubが用意するものと、自分で用意するもの（セルフホステッド）がある
+
+- id: u21
+  domain: モダンな開発
+  question: GitHub Marketplace の Actions でできることはどれ？
+  choices:
+    a: 他の人が作ったアクションを探して、自分のワークフローで使う
+    b: リポジトリを売り買いする
+    c: GitHubの社員を探す
+    d: 求人に応募する
+
+- id: u22
+  domain: モダンな開発
+  question: GitHub Copilot の提案を使うときの心がけとして、最も適切なものはどれ？
+  choices:
+    a: 提案はすべて自分の書いたものと同じなので、確認しなくてよい
+    b: 秘密情報も含めて、何でも入力して聞いてよい
+    c: 公開されているコードと似た提案が出ることもあるので、中身とあわせてライセンスや出どころにも気を配る
+    d: 提案はいつも正しいので、テストは要らない
+
+- id: u23
+  domain: プロジェクト管理
+  question: GitHub Projects のロードマップ表示の説明として正しいものはどれ？
+  choices:
+    a: コミットの差分を表示する
+    b: 日付や反復のフィールドをもとに、項目を時間の流れに沿って並べて表示する
+    c: リポジトリのファイル一覧を表示する
+    d: 支払いの履歴を表示する
+
+- id: u24
+  domain: プロジェクト管理
+  question: GitHub Projects の組み込みの自動化（ワークフロー）でできることの例はどれ？
+  choices:
+    a: コードを自動で書く
+    b: Issueを自動で削除する
+    c: リポジトリを自動で公開する
+    d: Issueが閉じられたら、項目の状態を自動で「Done」にする
+
+- id: u25
+  domain: プライバシー・セキュリティ・管理
+  question: 脆弱性がなくても、依存パッケージを定期的に新しくするプルリクエストを作ってほしい。使う機能はどれ？
+  choices:
+    a: Dependabot のバージョンアップデート（dependabot.yml で設定する）
+    b: シークレットスキャン
+    c: コードスキャン
+    d: ブランチ保護ルール
+
+- id: u26
+  domain: プライバシー・セキュリティ・管理
+  question: Organization のオーナーができることとして正しいものはどれ？
+  choices:
+    a: メンバーのパスワードを見る
+    b: メンバー全員に、二要素認証を必須にする
+    c: メンバーのPCを遠隔で操作する
+    d: ほかの組織のリポジトリを削除する
+
+- id: u27
+  domain: プライバシー・セキュリティ・管理
+  question: リポジトリに SECURITY.md を置く目的はどれ？
+  choices:
+    a: 依存関係の一覧を示す
+    b: パスワードの保存場所を示す
+    c: 脆弱性を見つけたときの報告方法（セキュリティポリシー）を示す
+    d: CIを設定する
+
+- id: u28
+  domain: GitHubコミュニティ
+  question: MIT ライセンスと GPL の違いとして正しいものはどれ？
+  choices:
+    a: どちらも商用利用はできない
+    b: MIT は、改変したらソースを必ず公開しなければならない
+    c: GPL は、ライセンス文を残さなくてよい
+    d: GPL は、改変したものを配布するとき同じライセンスでソースを公開する必要がある。MIT は著作権表示とライセンス文を残せば、自由度が高い
+
+- id: u29
+  domain: GitHubコミュニティ
+  question: GitHub のプロフィールページに、自己紹介（README）を表示したい。どうする？
+  choices:
+    a: 自分のユーザー名と同じ名前の公開リポジトリを作り、README.md を置く
+    b: どのリポジトリでもよいので README を置く
+    c: Issueに自己紹介を書く
+    d: Gistに自己紹介を書く
+
+- id: u30
+  domain: GitHubコミュニティ
+  question: 初めてそのプロジェクトに貢献する人向けの、取り組みやすいIssueに付けるラベルとしてよく使われるものはどれ？
+  choices:
+    a: wontfix
+    b: good first issue
+    c: duplicate
+    d: invalid

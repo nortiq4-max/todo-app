@@ -1,0 +1,273 @@
+# 理解度チェック 第2セット（場面で考える30問）
+# GH-900 の公式の出題範囲（7分野）に沿ったオリジナル問題です。実際の試験問題ではありません。
+# 答えは quiz/answers_set2.yaml に書き、python grader/quiz.py --set 2 で自己採点します。
+
+- id: s01
+  domain: GitとGitHubの基本
+  question: 間違えて main に直接コミットしてしまった（まだ push していない）。このコミットを残したまま作業用ブランチに移したい。最初にやるとよいことはどれ？
+  choices:
+    a: git push --force で上書きする
+    b: 今のコミットの位置で、新しいブランチを作る
+    c: リポジトリを削除して作り直す
+    d: そのファイルを .gitignore に書く
+
+- id: s02
+  domain: GitとGitHubの基本
+  question: git status を実行すると「Changes not staged for commit」と表示された。どういう状態？
+  choices:
+    a: ファイルを変更したが、まだ git add していない
+    b: すでにリモートに push 済みである
+    c: コミットが取り消された
+    d: ブランチが削除された
+
+- id: s03
+  domain: GitとGitHubの基本
+  question: チームの人が push した最新の変更を、手元の main に取り込みたい。使うコマンドはどれ？
+  choices:
+    a: git push
+    b: git init
+    c: git pull
+    d: git rm
+
+- id: s04
+  domain: GitとGitHubの基本
+  question: コミットメッセージの書き方として最も適切なものはどれ？
+  choices:
+    a: 「修正」とだけ書く
+    b: 毎回同じ文を書く
+    c: 何も書かない
+    d: 何を、なぜ変えたのかが分かる短い要約を書く
+
+- id: s05
+  domain: GitとGitHubの基本
+  question: マージしようとしたらコンフリクトが起きた。どういう状態？
+  choices:
+    a: 同じ箇所が両方のブランチで変わっていて、Gitが自動で統合できない。どちらを残すか人が決める必要がある
+    b: リポジトリが壊れて、元に戻せない
+    c: ネットワークが切れている
+    d: もう一方のブランチが削除された
+
+- id: s06
+  domain: GitとGitHubの基本
+  question: 「リモート」の説明として正しいものはどれ？
+  choices:
+    a: 手元のPCにある別のフォルダのこと
+    b: 手元のリポジトリと同期する、GitHubなど別の場所にあるリポジトリ。origin という名前がよく使われる
+    c: 削除されたコミットを保管する場所
+    d: GitHubの有料機能の名前
+
+- id: s07
+  domain: GitとGitHubの基本
+  question: git log で分かることはどれ？
+  choices:
+    a: パソコンの空き容量
+    b: GitHubのアカウントのパスワード
+    c: コミットの履歴（誰が、いつ、どんなメッセージで変更したか）
+    d: ほかの人の画面に表示されている内容
+
+- id: s08
+  domain: リポジトリの扱い
+  question: もう更新しないが、参照できるように残しておきたいリポジトリがある。読み取り専用にするにはどうする？
+  choices:
+    a: プライベートにする
+    b: 中身をすべて削除する
+    c: フォークする
+    d: アーカイブする
+
+- id: s09
+  domain: リポジトリの扱い
+  question: リポジトリのトップページに説明として表示されるファイルはどれ？
+  choices:
+    a: README.md
+    b: LICENSE
+    c: .gitignore
+    d: CODEOWNERS
+
+- id: s10
+  domain: 共同作業の機能
+  question: 書き込み権限のないオープンソースのリポジトリに、修正を提案したい。正しい流れはどれ？
+  choices:
+    a: 元のリポジトリの main に直接 push する
+    b: 作者にメールでファイルを送る
+    c: フォークし、自分のフォークでブランチを作って修正し、元のリポジトリにプルリクエストを送る
+    d: 自分で同じ名前のリポジトリを新しく作る
+
+- id: s11
+  domain: 共同作業の機能
+  question: レビューで、相手のコードの1行に具体的な書き換え案を示し、相手がボタンひとつで取り込めるようにしたい。使う機能はどれ？
+  choices:
+    a: Issueを新しく作る
+    b: レビューコメントで変更の提案（suggestion）を書く
+    c: リポジトリをフォークする
+    d: Wikiに書く
+
+- id: s12
+  domain: 共同作業の機能
+  question: プルリクエストのマージ方法のうち、ブランチのコミットを1つにまとめて取り込むものはどれ？
+  choices:
+    a: Create a merge commit
+    b: Rebase and merge
+    c: Cherry-pick
+    d: Squash and merge
+
+- id: s13
+  domain: 共同作業の機能
+  question: 組織のフロントエンドチーム全員に、一度に通知したい。どう書く？
+  choices:
+    a: "@組織名/チーム名 とチームをメンションする"
+    b: 全員の名前を本文に書かずに、タイトルだけ変える
+    c: ラベルを付ける
+    d: リポジトリにスターを付ける
+
+- id: s14
+  domain: 共同作業の機能
+  question: Issueを、対応する人に割り当てたい。使う項目はどれ？
+  choices:
+    a: Labels
+    b: Milestone
+    c: Assignees
+    d: Releases
+
+- id: s15
+  domain: 共同作業の機能
+  question: たくさんのIssueを、バグ・要望・質問などの種類で分けて探しやすくしたい。使うものはどれ？
+  choices:
+    a: ブランチ
+    b: ラベル
+    c: タグ（git tag）
+    d: Gist
+
+- id: s16
+  domain: 共同作業の機能
+  question: フォーク元のリポジトリに新しい変更が入った。自分のフォークを最新にしたい。どうする？
+  choices:
+    a: フォークを削除しないと最新にできない
+    b: スターを付け直す
+    c: Issueを立てて作者に頼む
+    d: GitHubの「Sync fork」を使う（または元のリポジトリから変更を取り込む）
+
+- id: s17
+  domain: 共同作業の機能
+  question: Discussions の Q&A で、質問への答えになった返信に印を付けたい。どうする？
+  choices:
+    a: その返信を「回答としてマーク（Mark as answer）」する
+    b: その返信を削除する
+    c: Discussionをロックする
+    d: 返信をIssueに変換する
+
+- id: s18
+  domain: 共同作業の機能
+  question: CODEOWNERS に書いた担当者の承認がないと、マージできないようにしたい。どこで設定する？
+  choices:
+    a: README.md に書く
+    b: .gitignore に書く
+    c: ブランチ保護ルールで、Code Owners のレビューを必須にする
+    d: Issueのテンプレートに書く
+
+- id: s19
+  domain: モダンな開発
+  question: GitHub Actions のワークフローで、APIキーを安全に使いたい。正しい方法はどれ？
+  choices:
+    a: ワークフローのYAMLに直接書く
+    b: リポジトリの Secrets に登録し、ワークフローから secrets の名前で参照する
+    c: README.md に書いておく
+    d: コミットメッセージに書く
+
+- id: s20
+  domain: モダンな開発
+  question: Codespaces で、チーム全員の開発環境（言語のバージョンや拡張機能）をそろえたい。どうする？
+  choices:
+    a: 全員に同じPCを配る
+    b: README に「同じものを入れてください」とだけ書く
+    c: ブランチ保護ルールを設定する
+    d: .devcontainer/devcontainer.json に環境を定義する
+
+- id: s21
+  domain: モダンな開発
+  question: 誤字を1つ直すだけなので、ブラウザでエディタの画面を開いて編集したい（プログラムの実行はしない）。手軽な方法はどれ？
+  choices:
+    a: リポジトリのページで「.」キーを押して github.dev を開く
+    b: 新しいサーバーを借りる
+    c: リポジトリを丸ごとダウンロードし直す
+    d: Issueに修正内容を書いて終わりにする
+
+- id: s22
+  domain: モダンな開発
+  question: GitHub Copilot Chat の使い方として適切なものはどれ？
+  choices:
+    a: 社外秘の顧客データを貼り付けて分析させる
+    b: 出てきた答えを確かめずに、そのまま本番に反映する
+    c: 選んだコードの説明を求めたり、テストの書き方を質問したりする
+    d: 他人のリポジトリのパスワードを聞き出す
+
+- id: s23
+  domain: プロジェクト管理
+  question: GitHub Projects で、2週間ごとの区切り（スプリント）でタスクを管理したい。使う機能はどれ？
+  choices:
+    a: ブランチ
+    b: 反復（Iteration）フィールド
+    c: Gist
+    d: リリース
+
+- id: s24
+  domain: プロジェクト管理
+  question: GitHub Projects で、各タスクの見積もり（ポイントなどの数字）を記録したい。どうする？
+  choices:
+    a: Issueのタイトルに毎回数字を書く
+    b: コミットメッセージに書く
+    c: 別のリポジトリを作る
+    d: 数値のカスタムフィールドを追加する
+
+- id: s25
+  domain: プライバシー・セキュリティ・管理
+  question: APIキーなどの秘密情報を含んだまま push しようとしたとき、push の段階で止めてくれる機能はどれ？
+  choices:
+    a: シークレットスキャンのプッシュ保護（push protection）
+    b: GitHub Pages
+    c: Discussions
+    d: マイルストーン
+
+- id: s26
+  domain: プライバシー・セキュリティ・管理
+  question: コードの中の脆弱性（SQLインジェクションなど）を、自動で見つけたい。使う機能はどれ？
+  choices:
+    a: GitHub Sponsors
+    b: Wiki
+    c: コードスキャン（CodeQL など）
+    d: ラベル
+
+- id: s27
+  domain: プライバシー・セキュリティ・管理
+  question: リポジトリの権限のうち、Issueやプルリクエストの整理（ラベル付けや割り当て）はできるが、コードの push はできないものはどれ？
+  choices:
+    a: Read
+    b: Triage
+    c: Write
+    d: Admin
+
+- id: s28
+  domain: GitHubコミュニティ
+  question: 会社の中に、オープンソースのやり方（コードを社内に公開し、部署をこえて誰でも改善を提案できる）を取り入れることを何という？
+  choices:
+    a: フォーク
+    b: アーカイブ
+    c: ミラーリング
+    d: InnerSource
+
+- id: s29
+  domain: GitHubコミュニティ
+  question: 気に入ったリポジトリをあとで見返せるようにしつつ、作者に「いいね」の気持ちを伝えたい。どうする？
+  choices:
+    a: スター（Star）を付ける
+    b: フォークして削除する
+    c: Issueを立てる
+    d: ブランチを作る
+
+- id: s30
+  domain: GitHubコミュニティ
+  question: 公開リポジトリで見つかった脆弱性を、公表する前に関係者だけで話し合って直したい。使う機能はどれ？
+  choices:
+    a: 公開のIssueに詳しく書く
+    b: Discussions に投稿する
+    c: リポジトリのセキュリティアドバイザリ（非公開で話し合い、修正を準備できる）
+    d: README に書く

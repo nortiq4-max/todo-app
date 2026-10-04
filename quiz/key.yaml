@@ -1,0 +1,93 @@
+# 理解度チェックの正解と解説（自己採点用）
+# 先に見ると力がつかないので、解き終わってから python grader/quiz.py で確認してください。
+
+q01:
+  answer: b
+  explanation: Gitは分散型。手元のリポジトリに履歴の全体があるので、オフラインでも履歴を見たりコミットしたりできる。
+q02:
+  answer: a
+  explanation: clone はリモートのリポジトリを、ブランチや履歴も含めて手元に複製する。変更を送るのは push。
+q03:
+  answer: c
+  explanation: コミットは、ステージした変更をメッセージつきでスナップショットとして記録する。統合は merge。
+q04:
+  answer: d
+  explanation: ブランチを切ると、mainを壊さずに別の作業を進め、できあがってから統合できる。
+q05:
+  answer: a
+  explanation: fetch は取得だけ。pull は fetch したうえで今のブランチに統合（merge か rebase）する。
+q06:
+  answer: d
+  explanation: Gitはツールそのもの。GitHubはGitのリポジトリを置き、プルリクエストやIssueなどで共同作業するサービス。
+q07:
+  answer: c
+  explanation: .gitignore は「追跡しないファイル」の指定。すでに追跡しているファイルは、書くだけでは外れない（git rm --cached が必要）。
+q08:
+  answer: c
+  explanation: パブリックは誰でも閲覧できる。プライベートは許可した人だけ。企業向けのプランには internal もある。
+q09:
+  answer: d
+  explanation: テンプレートから作ると、ファイル構成は同じで、履歴は1つのコミットから始まる。履歴ごと写すのはフォーク。
+q10:
+  answer: a
+  explanation: フォークは自分のアカウントにコピーを作る。書き込み権限がないリポジトリにも、プルリクエストで変更を提案できる。
+q11:
+  answer: d
+  explanation: プルリクエストは「このブランチの変更を取り込んでほしい」という提案。レビューと話し合いの場になる。
+q12:
+  answer: c
+  explanation: ドラフトは作業中の印。「Ready for review」に切り替えるまでマージできない。
+q13:
+  answer: b
+  explanation: Request changes は「このままではマージできない、直してほしい」というレビュー。承認は Approve、判断なしは Comment。
+q14:
+  answer: a
+  explanation: Closes や Fixes などのキーワードとIssue番号を書いたプルリクエストがデフォルトブランチにマージされると、そのIssueが閉じる。
+q15:
+  answer: d
+  explanation: マイルストーンは、リリースや期限ごとにIssueとプルリクエストをまとめ、何割終わったかを追うための機能。
+q16:
+  answer: b
+  explanation: "@メンションで、そのユーザー（@組織名/チーム名ならチーム）に通知が届く。"
+q17:
+  answer: c
+  explanation: Discussions は質問、アイデア、お知らせなどの会話の場。やることが決まったらIssueにする。
+q18:
+  answer: a
+  explanation: CODEOWNERS に書いた担当者は、該当するファイルを変更するプルリクエストで自動的にレビューを依頼される。
+q19:
+  answer: b
+  explanation: ワークフローは .github/workflows/ に置くYAMLファイル。push や pull_request などのイベントで動く。
+q20:
+  answer: d
+  explanation: CIは変更のたびに自動でビルドとテストを回し、壊れたことを早く知る仕組み。
+q21:
+  answer: b
+  explanation: Codespaces はクラウド上の開発環境。ブラウザやVS Codeから使え、手元に環境を作らなくてよい。
+q22:
+  answer: c
+  explanation: AIの提案は間違うこともある。読んで理解し、テストで確かめてから使う。秘密情報は貼らない。
+q23:
+  answer: a
+  explanation: Projects はIssueやプルリクエストを、テーブル、ボード、ロードマップの表示で管理できる。
+q24:
+  answer: d
+  explanation: .github/ISSUE_TEMPLATE/ に置いたテンプレートが、新しいIssueを作るときに選べるようになる。
+q25:
+  answer: b
+  explanation: 2FAはパスワードのほかにアプリやキーでの確認を求め、パスワードが漏れても乗っ取られにくくする。
+q26:
+  answer: a
+  explanation: Dependabot は脆弱性の通知（アラート）と、依存関係を更新するプルリクエストの自動作成ができる。
+q27:
+  answer: c
+  explanation: ブランチ保護ルールで、マージ前のレビュー承認やステータスチェックの合格を必須にできる。
+q28:
+  answer: b
+  explanation: ライセンスがなければ、公開されていても原則は著作権で守られる。再利用してもらいたいならライセンスを置く。
+q29:
+  answer: d
+  explanation: CONTRIBUTING.md は貢献のルール。Issueやプルリクエストを作る人に、ガイドラインへのリンクが表示される。
+q30:
+  answer: b
+  explanation: GitHub Sponsors で、オープンソースの開発者やプロジェクトを継続的にお金で支援できる。

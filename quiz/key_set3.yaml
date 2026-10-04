@@ -1,0 +1,92 @@
+# 第3セットの正解と解説（自己採点用）
+
+u01:
+  answer: c
+  explanation: git add で変更をステージ（次のコミットに含める準備）する。そのあと git commit で記録する。
+u02:
+  answer: a
+  explanation: git commit --amend で直前のコミットを作り直せる。push 済みのものに使うと、ほかの人の履歴とずれるので注意。
+u03:
+  answer: d
+  explanation: git revert は、取り消す内容を新しいコミットとして足す。履歴を書き換えないので、共有しているブランチでも安全。
+u04:
+  answer: b
+  explanation: HEAD は今の作業の位置。ふつうは、今いるブランチの最新のコミットを指している。
+u05:
+  answer: a
+  explanation: タグはコミットに付ける名前。リリースの版（v1.0.0 など）を示すのによく使う。
+u06:
+  answer: c
+  explanation: git stash で作業中の変更を退避し、git stash pop で戻せる。コミットせずに一時的に片付けたいときに使う。
+u07:
+  answer: d
+  explanation: 分散型では各自の手元に履歴全体があるので、サーバが止まっていても履歴の確認やコミットができる。
+u08:
+  answer: b
+  explanation: GitHub Pages は、リポジトリのHTMLなどから静的なWebサイトを公開できる。
+u09:
+  answer: c
+  explanation: Releases はタグをもとに、変更点のメモや配布ファイルをまとめて公開する機能。
+u10:
+  answer: a
+  explanation: Issueはやることや問題の記録と話し合いの場。プルリクエストはブランチの変更を取り込む提案で、レビューもここで行う。
+u11:
+  answer: d
+  explanation: Approve は承認。Request changes は修正の依頼、Comment は判断なしのコメント。
+u12:
+  answer: b
+  explanation: Closes などのキーワードでIssueが閉じるのは、デフォルトブランチにマージされたとき。
+u13:
+  answer: a
+  explanation: 「- [ ]」はタスクリストのチェックボックスになる。「- [x]」でチェック済みになる。
+u14:
+  answer: c
+  explanation: シークレットのGistは検索に出ないだけで、URLを知っていれば見られる。秘密情報を置く場所ではない。
+u15:
+  answer: b
+  explanation: Wiki はリポジトリに付いたドキュメント用のページ。使い方の説明などを書ける。
+u16:
+  answer: d
+  explanation: Watch でリポジトリの活動（Issue、プルリクエストなど）の通知を受け取る。お気に入りはスター。
+u17:
+  answer: a
+  explanation: ドラフトの間はコードオーナーにレビューが自動で依頼されない。Ready for review に切り替えると依頼される。
+u18:
+  answer: c
+  explanation: Issue フォームでは、入力欄（テキスト、選択肢、チェックボックスなど）を決めたテンプレートを作れる。
+u19:
+  answer: b
+  explanation: ワークフロー ＞ ジョブ ＞ ステップの関係。ジョブはそれぞれランナーの上で動き、ステップは順番に実行される。
+u20:
+  answer: d
+  explanation: ランナーはジョブを実行するマシン。GitHubがホストするものと、自分で用意するセルフホステッドランナーがある。
+u21:
+  answer: a
+  explanation: Marketplace で公開されているアクションを探し、ワークフローの uses で使える。
+u22:
+  answer: c
+  explanation: AIの提案は間違うこともあり、既存のコードに似ることもある。内容を確かめ、秘密情報は入れない。
+u23:
+  answer: b
+  explanation: ロードマップ表示は、日付や反復（Iteration）のフィールドをもとに、項目を時間軸に並べる。
+u24:
+  answer: d
+  explanation: Projects の組み込みワークフローで、Issueが閉じたら状態を Done にする、などを自動化できる。
+u25:
+  answer: a
+  explanation: バージョンアップデートは dependabot.yml で設定し、決めた間隔で依存パッケージを新しくするプルリクエストを作る。
+u26:
+  answer: b
+  explanation: Organization のオーナーは、メンバー全員に二要素認証を必須にできる。パスワードを見ることはできない。
+u27:
+  answer: c
+  explanation: SECURITY.md はセキュリティポリシー。脆弱性を見つけた人に、公開の場ではなくどこへ報告すればよいかを示す。
+u28:
+  answer: d
+  explanation: GPL はコピーレフトのライセンスで、改変版を配布するときも同じライセンスでソースを公開する必要がある。MIT は条件がゆるい。
+u29:
+  answer: a
+  explanation: ユーザー名と同じ名前の公開リポジトリに README.md を置くと、プロフィールページに表示される。
+u30:
+  answer: b
+  explanation: good first issue は、初めての貢献者に向いたIssueを示すラベルとしてよく使われる。

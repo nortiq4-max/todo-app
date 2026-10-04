@@ -1,0 +1,92 @@
+# 第2セットの正解と解説（自己採点用）
+
+s01:
+  answer: b
+  explanation: 今の位置でブランチを作ればコミットは残る。そのあと main を元の位置に戻せばよい。force push は他人の作業を消す危険がある。
+s02:
+  answer: a
+  explanation: 変更はあるが、まだステージ（git add）されていない状態。コミットに含めるには git add が必要。
+s03:
+  answer: c
+  explanation: git pull はリモートの変更を取得して、今のブランチに取り込む。push は送る方向。
+s04:
+  answer: d
+  explanation: あとで履歴を読む人（未来の自分も）のために、何を・なぜ変えたかが分かる要約を書く。
+s05:
+  answer: a
+  explanation: コンフリクトは同じ箇所の変更がぶつかった状態。どちらを残すか（両方か）を人が決めて、解決のコミットをする。
+s06:
+  answer: b
+  explanation: リモートは同期先のリポジトリ。clone すると、元のリポジトリが origin という名前で登録される。
+s07:
+  answer: c
+  explanation: git log はコミットの履歴を表示する。作者、日時、メッセージ、コミットのIDが分かる。
+s08:
+  answer: d
+  explanation: アーカイブすると読み取り専用になる。あとで元に戻すこともできる。
+s09:
+  answer: a
+  explanation: README.md の内容が、リポジトリのトップに表示される。
+s10:
+  answer: c
+  explanation: 権限がないときは、フォーク → ブランチで修正 → 元のリポジトリへプルリクエスト、が基本の流れ。
+s11:
+  answer: b
+  explanation: レビューコメントで suggestion（変更の提案）を書くと、作者はボタンで取り込める。
+s12:
+  answer: d
+  explanation: Squash and merge は、ブランチのコミットを1つにまとめて取り込む。履歴がすっきりする。
+s13:
+  answer: a
+  explanation: "@組織名/チーム名 でチームをメンションすると、メンバー全員に通知が届く。"
+s14:
+  answer: c
+  explanation: Assignees で担当者を割り当てる。誰が対応するかが一目で分かる。
+s15:
+  answer: b
+  explanation: ラベルでIssueやプルリクエストを分類し、絞り込んで探せる。
+s16:
+  answer: d
+  explanation: フォークのページの「Sync fork」で、元のリポジトリの変更を取り込める。
+s17:
+  answer: a
+  explanation: Q&A カテゴリでは、答えになった返信を「回答としてマーク」できる。
+s18:
+  answer: c
+  explanation: ブランチ保護ルールの「Code Owners のレビューを必須にする」で、担当者の承認なしではマージできなくなる。
+s19:
+  answer: b
+  explanation: Secrets は暗号化して保存され、ワークフローから参照できる。YAMLやコードに直接書かない。
+s20:
+  answer: d
+  explanation: devcontainer.json に環境を書いておくと、Codespaces を開いた全員が同じ環境で始められる。
+s21:
+  answer: a
+  explanation: リポジトリで「.」キーを押すと github.dev（ブラウザのエディタ）が開く。ターミナルでの実行はできないので、実行したいなら Codespaces を使う。
+s22:
+  answer: c
+  explanation: Copilot Chat はコードの説明やテストの書き方の相談に向いている。秘密情報は貼らず、答えは確かめてから使う。
+s23:
+  answer: b
+  explanation: Projects の反復（Iteration）フィールドで、スプリントのような期間の区切りを管理できる。
+s24:
+  answer: d
+  explanation: Projects には数値・日付・選択肢などのカスタムフィールドを追加できる。
+s25:
+  answer: a
+  explanation: シークレットスキャンのプッシュ保護は、対応する種類の秘密情報を含む push をその場で止める。
+s26:
+  answer: c
+  explanation: コードスキャン（CodeQL など）は、コードの脆弱性やバグのパターンを自動で見つける。
+s27:
+  answer: b
+  explanation: Triage はIssueやプルリクエストの管理（ラベル、割り当てなど）ができるが、書き込み（push）はできない。
+s28:
+  answer: d
+  explanation: InnerSource は、オープンソースの文化や進め方を社内の開発に取り入れること。
+s29:
+  answer: a
+  explanation: スターを付けるとあとで一覧から見返せ、作者への応援にもなる。
+s30:
+  answer: c
+  explanation: セキュリティアドバイザリで、非公開のまま関係者と話し合い、修正を準備してから公表できる。
